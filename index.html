@@ -11,14 +11,18 @@
     $(document).ready(function() {
       $.get("datos.csv", function(data) {
         const filas = data.split('\n');
-        const valores1 = [];
-        const valores2 = [];
+        const val1 = [];
+        const val2 = [];
+        const val3 = [];
+        const val4 = [];
         filas.forEach((fila) => {
           const celdas = fila.split(',');
-          valores1.push(celdas[0]);
-          valores2.push(celdas[1]);
+          val1.push(celdas[0]);
+          val2.push(celdas[1]);
+          val3.push(celdas[2]);
+          val4.push(celdas[3]);
         });
-        console.log(`Valor actual: ${valores1[1]}`)
+        console.log(`Valor actual: ${val1[1]}`)
       });
     });
   </script>

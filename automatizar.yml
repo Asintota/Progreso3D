@@ -12,11 +12,11 @@ jobs:
       - name: Clonar repositorios
         uses: actions/checkout@v2
         with:
-          repository: usuario/repositorio1
-          path: repositorio1
-      - name: Actualizar archivo index.html del repositorio1
+          repository: Asintota/Test-1
+          path: Test-1
+      - name: Actualizar archivo index.html del Test-1
         run: |
-          cd repositorio1
+          cd Test-1
           # Actualice el archivo index.html aquí
           git add index.html
           git commit -m "Actualizar index.html"
@@ -24,11 +24,11 @@ jobs:
       - name: Clonar repositorios
         uses: actions/checkout@v2
         with:
-          repository: usuario/repositorio2
-          path: repositorio2
-      - name: Actualizar archivo index.html del repositorio2
+          repository: Asintota/Test
+          path: Test
+      - name: Actualizar archivo index.html del Test
         run: |
-          cd repositorio2
+          cd Test
           # Actualice el archivo index.html aquí
           git add index.html
           git commit -m "Actualizar index.html"

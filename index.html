@@ -45,12 +45,20 @@
       const text = card.querySelector('.text');
       if (porcentaje >= 70) {
         text.style.color = '#00ff43';
+        h2.style.color = '#00ff43';
+        card.classList.add('greater-than-70');
       } else if (porcentaje >=50) {
         text.style.color = 'yellow';
+        h2.style.color = 'yellow';
+        card.classList.add('greater-than-50');
       } else if (porcentaje >= 30) {
         text.style.color = 'orange';
+        h2.style.color = 'orange';
+        card.classList.add('greater-than-30');
       } else {
         text.style.color = 'red';
+        h2.style.color = 'red';
+        card.classList.add('greater-than-0');
       }
       });
     });
@@ -127,14 +135,6 @@
 
 
 
-  <script>
-    window.addEventListener('load', () => {
-      const cards = document.querySelectorAll('.card');
-      cards.forEach((card) => {
-        const porcentaje = card.getAttribute('data-porcentaje');
-        
-      });
-    });
-  </script>
+ 
 </body>
 </html>

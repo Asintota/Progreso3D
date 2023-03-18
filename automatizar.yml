@@ -1,0 +1,35 @@
+name: Actualizar páginas web
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorios
+        uses: actions/checkout@v2
+        with:
+          repository: usuario/repositorio1
+          path: repositorio1
+      - name: Actualizar archivo index.html del repositorio1
+        run: |
+          cd repositorio1
+          # Actualice el archivo index.html aquí
+          git add index.html
+          git commit -m "Actualizar index.html"
+          git push
+      - name: Clonar repositorios
+        uses: actions/checkout@v2
+        with:
+          repository: usuario/repositorio2
+          path: repositorio2
+      - name: Actualizar archivo index.html del repositorio2
+        run: |
+          cd repositorio2
+          # Actualice el archivo index.html aquí
+          git add index.html
+          git commit -m "Actualizar index.html"
+          git push

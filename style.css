@@ -136,126 +136,20 @@ svg circle:nth-child(2) {
 }
 
 
-.card:nth-child(1) svg circle:nth-child(2) {
+.greater-than-0 svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * var(--porcentaje)) / 100);
   stroke: red;
 }
-
-.card:nth-child(1)[data-porcentaje^="3"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: orange;
-}
-.card:nth-child(1)[data-porcentaje^="4"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: orange;
-}
-
-.card:nth-child(1)[data-porcentaje^="5"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: yellow;
-}
-.card:nth-child(1)[data-porcentaje^="6"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: yellow;
-}
-
-.card:nth-child(1)[data-porcentaje^="7"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-.card:nth-child(1)[data-porcentaje^="8"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-.card:nth-child(1)[data-porcentaje^="9"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-
-
-
-
-.card:nth-child(2) svg circle:nth-child(2) {
+.greater-than-30 svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * var(--porcentaje)) / 100);
-  stroke: red;
-}
-
-.card:nth-child(2)[data-porcentaje^="3"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
   stroke: orange;
 }
-.card:nth-child(2)[data-porcentaje^="4"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: orange;
-}
-
-.card:nth-child(2)[data-porcentaje^="5"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: yellow;
-}
-.card:nth-child(2)[data-porcentaje^="6"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: yellow;
-}
-
-.card:nth-child(2)[data-porcentaje^="7"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-.card:nth-child(2)[data-porcentaje^="8"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-.card:nth-child(2)[data-porcentaje^="9"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-
-
-
-
-.card:nth-child(3) svg circle:nth-child(2) {
+.greater-than-50 svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * var(--porcentaje)) / 100);
-  stroke: red;
-}
-
-.card:nth-child(3)[data-porcentaje^="3"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: orange;
-}
-.card:nth-child(3)[data-porcentaje^="4"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: orange;
-}
-
-.card:nth-child(3)[data-porcentaje^="5"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: yellow;
-}
-.card:nth-child(3)[data-porcentaje^="6"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
   stroke: yellow;
 }
 
-.card:nth-child(3)[data-porcentaje^="7"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-.card:nth-child(3)[data-porcentaje^="8"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-.card:nth-child(3)[data-porcentaje^="9"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-
-
-
-.card:nth-child(4) svg circle:nth-child(2) {
+.greater-than-70 svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * var(--porcentaje)) / 100);
-  stroke: red;
-}
-
-.card:nth-child(4)[data-porcentaje^="3"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: orange;
-}
-.card:nth-child(4)[data-porcentaje^="4"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: orange;
-}
-
-.card:nth-child(4)[data-porcentaje^="5"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: yellow;
-}
-.card:nth-child(4)[data-porcentaje^="6"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: yellow;
-}
-
-.card:nth-child(4)[data-porcentaje^="7"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-.card:nth-child(4)[data-porcentaje^="8"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
-  stroke: #00ff43;
-}
-.card:nth-child(4)[data-porcentaje^="9"]:not([data-porcentaje^="0"]) svg circle:nth-child(2) {
   stroke: #00ff43;
 }

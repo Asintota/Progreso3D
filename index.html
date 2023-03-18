@@ -18,11 +18,7 @@
           valores1.push(celdas[0]);
           valores2.push(celdas[1]);
         });
-        const barra = document.querySelector('#barra');
-        const valor = document.querySelector('#valor');
-        barra.value = valores1[1];
-        barra.max = valores2[1];
-        valor.textContent = `Valor actual: ${valores1[1]}`;
+        console.log(`Valor actual: ${valores1[1]}`)
       });
     });
   </script>

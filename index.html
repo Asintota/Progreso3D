@@ -22,23 +22,23 @@
           val3.push(celdas[2]);
           val4.push(celdas[3]);
         });
-        console.log(`Valor actual: ${val1[0]}`)
-        console.log(`Valor actual: ${val2[0]}`)
-        console.log(`Valor actual: ${val3[0]}`)
-        console.log(`Valor actual: ${val4[0]}`)
-        
-        //const cards = document.querySelectorAll('.card');
-        //cards[0].setAttribute('data-porcentaje', val1[0]);
-        //cards[1].setAttribute('data-porcentaje', val2[0]);
-        //cards[2].setAttribute('data-porcentaje', val3[0]);
-        //cards[3].setAttribute('data-porcentaje', val4[0]);
       });
     });
     
   </script>
   <script>
+    console.log(`Valor actual: ${val1[0]}`)
+    console.log(`Valor actual: ${val2[0]}`)
+    console.log(`Valor actual: ${val3[0]}`)
+    console.log(`Valor actual: ${val4[0]}`)
+        
+      
     window.addEventListener('load', () => {
       const cards = document.querySelectorAll('.card');
+      cards[0].setAttribute('data-porcentaje', val1[0]);
+      cards[1].setAttribute('data-porcentaje', val2[0]);
+      cards[2].setAttribute('data-porcentaje', val3[0]);
+      cards[3].setAttribute('data-porcentaje', val4[0]);
       cards.forEach((card) => {
         const porcentaje = card.getAttribute('data-porcentaje');
         card.style.setProperty('--porcentaje', porcentaje);

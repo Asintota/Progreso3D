@@ -13,52 +13,49 @@
     const val3 = [];
     const val4 = [];
     $(document).ready(function() {
- 
-      $.get("datos.csv", function(data) {
-        const filas = data.split('\n');
+  const val1 = [];
+  const val2 = [];
+  const val3 = [];
+  const val4 = [];
 
-        filas.forEach((fila) => {
-          const celdas = fila.split(',');
-          val1.push(celdas[0]);
-          val2.push(celdas[1]);
-          val3.push(celdas[2]);
-          val4.push(celdas[3]);
-        });
-     
-       });
-     });
-  
+  $.get("datos.csv", function(data) {
+    const filas = data.split('\n');
+    filas.forEach((fila) => {
+      const celdas = fila.split(',');
+      val1.push(celdas[0]);
+      val2.push(celdas[1]);
+      val3.push(celdas[2]);
+      val4.push(celdas[3]);
+    });
 
-        
-      
-    window.addEventListener('load', () => {
-      console.log(`Valor actual: ${val1[0]}`)
-      console.log(`Valor actual: ${val2[0]}`)
-      console.log(`Valor actual: ${val3[0]}`)
-      console.log(`Valor actual: ${val4[0]}`)
-      
-      const cards = document.querySelectorAll('.card');
-      cards[0].setAttribute('data-porcentaje', val1[0]);
-      cards[1].setAttribute('data-porcentaje', val2[0]);
-      cards[2].setAttribute('data-porcentaje', val3[0]);
-      cards[3].setAttribute('data-porcentaje', val4[0]);
-      cards.forEach((card) => {
-        const porcentaje = card.getAttribute('data-porcentaje');
-        card.style.setProperty('--porcentaje', porcentaje);
-        
-        
-        const text = card.querySelector('.text');
-        if (porcentaje >= 70) {
-          text.style.color = '#00ff43';
-        } else if (porcentaje >=50) {
-          text.style.color = 'yellow';
-        } else if (porcentaje >= 30) {
-          text.style.color = 'orange';
-        } else {
-          text.style.color = 'red';
-        }
+    console.log(`Valor actual: ${val1[0]}`)
+    console.log(`Valor actual: ${val2[0]}`)
+    console.log(`Valor actual: ${val3[0]}`)
+    console.log(`Valor actual: ${val4[0]}`)
+
+    const cards = document.querySelectorAll('.card');
+    cards[0].setAttribute('data-porcentaje', val1[0]);
+    cards[1].setAttribute('data-porcentaje', val2[0]);
+    cards[2].setAttribute('data-porcentaje', val3[0]);
+    cards[3].setAttribute('data-porcentaje', val4[0]);
+    cards.forEach((card) => {
+      const porcentaje = card.getAttribute('data-porcentaje');
+      card.style.setProperty('--porcentaje', porcentaje);
+
+      const text = card.querySelector('.text');
+      if (porcentaje >= 70) {
+        text.style.color = '#00ff43';
+      } else if (porcentaje >=50) {
+        text.style.color = 'yellow';
+      } else if (porcentaje >= 30) {
+        text.style.color = 'orange';
+      } else {
+        text.style.color = 'red';
+      }
       });
     });
+  });
+
 
   </script>
   

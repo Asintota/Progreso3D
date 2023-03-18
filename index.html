@@ -8,13 +8,14 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+    const val1 = [];
+    const val2 = [];
+    const val3 = [];
+    const val4 = [];
     $(document).ready(function() {
       $.get("datos.csv", function(data) {
         const filas = data.split('\n');
-        const val1 = [];
-        const val2 = [];
-        const val3 = [];
-        const val4 = [];
+
         filas.forEach((fila) => {
           const celdas = fila.split(',');
           val1.push(celdas[0]);
@@ -23,7 +24,8 @@
           val4.push(celdas[3]);
         });
      
-    
+       });
+     });
   
     console.log(`Valor actual: ${val1[0]}`)
     console.log(`Valor actual: ${val2[0]}`)
@@ -54,8 +56,7 @@
         }
       });
     });
-   });
-  });
+
   </script>
   
 </head>

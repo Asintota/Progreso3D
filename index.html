@@ -1,119 +1,132 @@
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokemon Card Generator</title>
-    <style>
-        * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-        }
-        body {
-        background-color: #eff3ff;
-        }
-        .container {
-        width: 350px;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
-        }
-        #card {
-        position: relative;
-        width: 100%;
-        padding: 30px 20px;
-        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-        border-radius: 10px;
-        }
-        #card img {
-        display: block;
-        width: 180px;
-        max-height: 200px;
-        position: relative;
-        margin: 20px auto;
-        }
-        .hp {
-        width: 80px;
-        background-color: #ffffff;
-        text-align: center;
-        padding: 8px 0;
-        border-radius: 30px;
-        margin-left: auto;
-        font-weight: 400;
-        }
-        .poke-name {
-        text-align: center;
-        font-weight: 600;
-        }
-        .types {
-        display: flex;
-        justify-content: space-around;
-        margin: 20px 0 40px 0;
-        }
-        .hp span,
-        .types span {
-        font-size: 12px;
-        letter-spacing: 0.4px;
-        font-weight: 600;
-        }
-        .types span {
-        padding: 5px 20px;
-        border-radius: 20px;
-        color: #ffffff;
-        }
-        .stats {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        text-align: center;
-        }
-        .stats p {
-        color: #404060;
-        }
-        #btn {
-        display: block;
-        padding: 15px 60px;
-        font-size: 18px;
-        background-color: #101010;
-        color: #ffffff;
-        position: relative;
-        margin: 30px auto;
-        border: none;
-        border-radius: 5px;
-        }
-    </style>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pure css Circle Progress</title>
 
-  <body>
-    <div class="container">
-      <div id="card"></div>
-      <button id="btn">Barra de progreso</button>
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.get("datos.csv", function(data) {
+        const filas = data.split('\n');
+        const valores1 = [];
+        const valores2 = [];
+        filas.forEach((fila) => {
+          const celdas = fila.split(',');
+          valores1.push(celdas[0]);
+          valores2.push(celdas[1]);
+        });
+        const barra = document.querySelector('#barra');
+        const valor = document.querySelector('#valor');
+        barra.value = valores1[1];
+        barra.max = valores2[1];
+        valor.textContent = `Valor actual: ${valores1[1]}`;
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener('load', () => {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card) => {
+        const porcentaje = card.getAttribute('data-porcentaje');
+        card.style.setProperty('--porcentaje', porcentaje);
+        
+        
+        const text = card.querySelector('.text');
+        if (porcentaje >= 70) {
+          text.style.color = '#00ff43';
+        } else if (porcentaje >=50) {
+          text.style.color = 'yellow';
+        } else if (porcentaje >= 30) {
+          text.style.color = 'orange';
+        } else {
+          text.style.color = 'red';
+        }
+      });
+    });
+  </script>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="card" data-porcentaje="30">
+        <div class="box">
+          <div class="percent">
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="number">
+              
+            </div>
+          </div>
+          <h2 class="text">Exploradora</h2>
+        </div>
+      </div>
+      <div class="card" data-porcentaje="50">
+        <div class="box">
+          <div class="percent">
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="number">
+              
+            </div>
+          </div>
+          <h2 class="text">Emprendedora</h2>
+        </div>
+      </div>
     </div>
-    <progress id="barra" value="0" max="100"></progress>
-    <div id="valor"></div>
-    <!-- Script -->
-    <script src="script.js">
-       
+
+    <div class="row">
+      <div class="card" data-porcentaje="20">
+        <div class="box">
+          <div class="percent">
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="number">
+            </div>
+          </div>
+          <h2 class="text">Diplomática</h2>
+        </div>
+      </div>
+    
+    
+      <div class="card" data-porcentaje="10">
+        <div class="box">
+          <div class="percent">
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="number">
+            </div>
+          </div>
+          <h2 class="text">Ninja</h2>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-
-    </script>
-  </body>
-
-
-
-
-
-
-
+  <script>
+    window.addEventListener('load', () => {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card) => {
+        const porcentaje = card.getAttribute('data-porcentaje');
+        const h2 = document.createElement('h2');
+        h2.textContent = porcentaje + '%';
+        card.querySelector('.number').innerHTML = '';
+        card.querySelector('.number').appendChild(h2);
+      });
+    });
+  </script>
+</body>
 </html>
-

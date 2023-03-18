@@ -38,7 +38,10 @@
     cards.forEach((card) => {
       const porcentaje = card.getAttribute('data-porcentaje');
       card.style.setProperty('--porcentaje', porcentaje);
-
+      const h2 = document.createElement('h2');
+      h2.textContent = porcentaje + '%';
+      card.querySelector('.number').innerHTML = '';
+      card.querySelector('.number').appendChild(h2);
       const text = card.querySelector('.text');
       if (porcentaje >= 70) {
         text.style.color = '#00ff43';
@@ -129,10 +132,7 @@
       const cards = document.querySelectorAll('.card');
       cards.forEach((card) => {
         const porcentaje = card.getAttribute('data-porcentaje');
-        const h2 = document.createElement('h2');
-        h2.textContent = porcentaje + '%';
-        card.querySelector('.number').innerHTML = '';
-        card.querySelector('.number').appendChild(h2);
+        
       });
     });
   </script>

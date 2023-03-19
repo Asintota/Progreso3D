@@ -226,4 +226,9 @@ svg circle:nth-child(2) {
 
 }
 
+ul {
+  list-style-position: outside;
+  padding-left: 30px;
+  line-height: 1.5;
+}
 

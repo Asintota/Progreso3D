@@ -194,7 +194,7 @@ svg circle:nth-child(2) {
 
 .handshake {
   fill:#A9A9A9;
-  width: 23%; /* set the width to 50% */
+  width: 23; /* set the width to 50% */
   height: auto; /* set the height to auto */
   /*display: block; /* set display to block */
   margin: auto; 
@@ -203,7 +203,7 @@ svg circle:nth-child(2) {
 
 .compass {
   fill: #A9A9A9;
-  width: 17%; /* set the width to 50% */
+  width: 17; /* set the width to 50% */
   height: auto; /* set the height to auto */
   /*display: block; /* set display to block */
   margin: auto; 

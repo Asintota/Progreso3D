@@ -17,7 +17,7 @@
   const val3 = [];
   const val4 = [];
 
-  $.get("datos.csv", function(data) {
+  $.get("../datos.csv", function(data) {
     const filas = data.split('\n');
     filas.forEach((fila) => {
       const celdas = fila.split(',');
